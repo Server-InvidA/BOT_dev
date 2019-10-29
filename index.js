@@ -5,7 +5,7 @@ const PREFIX = "?";
 
 //instance
 bot.on('ready', function () {
-	bot.user.setGame('/help').catch(console.error);
+	bot.user.setActivity('/help').catch(console.error);
 });
 
 bot.on('message', message => {
