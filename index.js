@@ -28,7 +28,7 @@ bot.on('message', message => {
 				liste.send(newbot);
 				console.send("creer une catégorie");
 				console.send("creer un salon texte et vocal");
-				console.send("creer un role");
+				console.send("?addrole " + name);
 				console.send("ajouter role au créateur");
 				console.send("creer password");
 			} else {
