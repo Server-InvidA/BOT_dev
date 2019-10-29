@@ -8,7 +8,7 @@ bot.on('ready', function () {
 	bot.user.setGame('/help').catch(console.error)
 })
 
-bot.on('message', function (message) {
+bot.on('message', message => {
 	if(message.content[0] === PREFIX) {
 		
 		/*var author chaine= message.author()
