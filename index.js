@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const console = new Discord.WebhookClient(process.env.consoleid, process.env.consoletoken)
+const PREFIX = "?"
 
 //instance
 bot.on('ready', function () {
@@ -8,11 +9,19 @@ bot.on('ready', function () {
 })
 
 bot.on('message', function (message) {
-	/*var author chaine= message.author()
-	console.send(author)*/
-	if (message.content === '?create') {
-		console.send("test")
-		console.send("autre test")
+	if(message.content[0] === PREFIX) {
+		
+		/*var author chaine= message.author()
+		console.send(author)*/
+		let splitMessage = message.content.split(" ")
+		if (splitMessage[0] === '?create') {
+			if (splitMessage.lengh === 3) {
+				console.send(splitmessage[1])
+				console.send("autre test")
+			} else {
+				message.channel.send("Utilisation: ?create <name> <description>")
+			}
+		}
 	}
 
 	/*if (message.content === '?grades-bourgeois') {
