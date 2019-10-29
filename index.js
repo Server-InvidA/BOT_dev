@@ -21,11 +21,11 @@ bot.on('message', message => {
 			if (splitMessage.length === 3) {
 				let name = splitMessage[1];
 				let description = splitMessage[2];
-				let gradesEmbed = new Discord.RichEmbed()
+				let newbot = new Discord.RichEmbed()
 					.setColor("#ff0000")
 					.addField(name + " par " + auteur, "Description: " + description);
 				console.send(splitMessage[1]);
-				console.send(auteur);
+				liste.send(newbot);
 			} else {
 				message.channel.send("Utilisation: ?create <name> <description>");
 			}
