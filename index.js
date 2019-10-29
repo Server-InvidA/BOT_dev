@@ -22,15 +22,21 @@ bot.on('message', message => {
 				let name = splitMessage[1];
 				let description = splitMessage[2];
 				//let mdp = splitMessage[3];
-				let newbot = new Discord.RichEmbed()
+				/*let newbot = new Discord.RichEmbed()
 					.setColor("#ff0000")
 					.addField(name + " par " + auteur, "Description: " + description);
-				liste.send(newbot);
+				liste.send(newbot);*/
 				console.send("creer une catégorie");
 				console.send("creer un salon texte et vocal");
-				message.channel.send("?addrank " + name + " #6c0479");
+				console.send("?addrank " + name + " #6c0479");
 				console.send("ajouter role au créateur");
 				console.send("creer password");
+				console.send("message privé");
+				
+				message.author.createDM().then(channel => {
+					channel.send("Merci d'avoir créé le projet " + name);
+				});
+				
 			} else {
 				message.channel.send("Utilisation: ?create <name> <description>");
 			}
