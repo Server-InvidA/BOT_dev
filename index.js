@@ -14,7 +14,7 @@ bot.on('message', message => {
 		/*var author chaine= message.author()
 		console.send(author)*/
 		let splitMessage = message.content.split(" ");
-		let auteur = message.author;
+		let auteur = message.author();
 		
 		if (splitMessage[0] === '?create') {
 			if (splitMessage.length === 3) {
