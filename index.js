@@ -15,7 +15,7 @@ bot.on('message', function (message) {
 		console.send(author)*/
 		let splitMessage = message.content.split(" ")
 		if (splitMessage[0] === '?create') {
-			if (splitMessage.lengh === 3) {
+			if (splitMessage.length === 3) {
 				console.send(splitmessage[1])
 				console.send("autre test")
 			} else {
