@@ -35,7 +35,7 @@ bot.on('message', message => {
 				
 				message.author.createDM().then(channel => {
 					channel.send("Merci d'avoir créé le projet " + name);
-				});
+				}).catch(console.error);
 				
 			} else {
 				message.channel.send("Utilisation: ?create <name> <description>");
