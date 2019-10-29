@@ -18,14 +18,19 @@ bot.on('message', message => {
 		let auteur = message.author.username;
 		
 		if (splitMessage[0] === '?create') {
-			if (splitMessage.length === 3) {
+			if (splitMessage.length === 4) {
 				let name = splitMessage[1];
 				let description = splitMessage[2];
+				let mdp = splitMessage[3];
 				let newbot = new Discord.RichEmbed()
 					.setColor("#ff0000")
 					.addField(name + " par " + auteur, "Description: " + description);
-				console.send(splitMessage[1]);
 				liste.send(newbot);
+				console.send("creer une catégorie");
+				console.send("creer un salon texte et vocal");
+				console.send("creer un role");
+				console.send("ajouter role au créateur");
+				console.send("creer password");
 			} else {
 				message.channel.send("Utilisation: ?create <name> <description>");
 			}
