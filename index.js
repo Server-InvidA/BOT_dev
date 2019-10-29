@@ -9,7 +9,7 @@ bot.on('ready', function () {
 
 bot.on('message', function (message) {
 	autor = message.author()
-	message.channel.send(autor)
+	console.send(autor)
 	if (message.content === '?create') {
 		console.send("test")
 		console.send("autre test")
