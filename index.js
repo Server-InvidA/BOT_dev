@@ -18,10 +18,10 @@ bot.on('message', message => {
 		let auteur = message.author.username;
 		
 		if (splitMessage[0] === '?create') {
-			if (splitMessage.length === 4) {
+			if (splitMessage.length === 3) {
 				let name = splitMessage[1];
 				let description = splitMessage[2];
-				let mdp = splitMessage[3];
+				//let mdp = splitMessage[3];
 				let newbot = new Discord.RichEmbed()
 					.setColor("#ff0000")
 					.addField(name + " par " + auteur, "Description: " + description);
