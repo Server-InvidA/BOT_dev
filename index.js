@@ -8,8 +8,8 @@ bot.on('ready', function () {
 })
 
 bot.on('message', function (message) {
-	var author chaine= message.author()
-	console.send(author)
+	/*var author chaine= message.author()
+	console.send(author)*/
 	if (message.content === '?create') {
 		console.send("test")
 		console.send("autre test")
