@@ -8,7 +8,9 @@ bot.on('ready', function () {
 })
 
 bot.on('message', function (message) {
-	if (message.content === '/help') {
+	const autor = message.autor
+	message.channel.send(autor)
+	if (message.content === '?create') {
 		console.send("test")
 		console.send("autre test")
 	}
