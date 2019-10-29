@@ -19,7 +19,7 @@ bot.on('message', message => {
 		if (splitMessage[0] === '?create') {
 			if (splitMessage.length === 3) {
 				console.send(splitMessage[1]);
-				console.send("autre test");
+				console.send(auteur);
 			} else {
 				message.channel.send("Utilisation: ?create <name> <description>");
 			}
