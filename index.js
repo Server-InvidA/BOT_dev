@@ -1,25 +1,25 @@
-const Discord = require('discord.js')
-const bot = new Discord.Client()
-const console = new Discord.WebhookClient(process.env.consoleid, process.env.consoletoken)
-const PREFIX = "?"
+const Discord = require('discord.js');
+const bot = new Discord.Client();
+const console = new Discord.WebhookClient(process.env.consoleid, process.env.consoletoken);
+const PREFIX = "?";
 
 //instance
 bot.on('ready', function () {
-	bot.user.setGame('/help').catch(console.error)
-})
+	bot.user.setGame('/help').catch(console.error);
+});
 
 bot.on('message', message => {
 	if(message.content[0] === PREFIX) {
 		
 		/*var author chaine= message.author()
 		console.send(author)*/
-		let splitMessage = message.content.split(" ")
+		let splitMessage = message.content.split(" ");
 		if (splitMessage[0] === '?create') {
 			if (splitMessage.length === 3) {
-				console.send(splitMessage[1])
-				console.send("autre test")
+				console.send(splitMessage[1]);
+				console.send("autre test");
 			} else {
-				message.channel.send("Utilisation: ?create <name> <description>")
+				message.channel.send("Utilisation: ?create <name> <description>");
 			}
 		}
 	}
@@ -42,4 +42,4 @@ bot.on('message', message => {
 	}*/
 })
 
-bot.login(process.env.TOKEN)
+bot.login(process.env.TOKEN);
