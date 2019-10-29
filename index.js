@@ -16,7 +16,7 @@ bot.on('message', message => {
 		let splitMessage = message.content.split(" ")
 		if (splitMessage[0] === '?create') {
 			if (splitMessage.length === 3) {
-				console.send(splitmessage[1])
+				console.send(splitMessage[1])
 				console.send("autre test")
 			} else {
 				message.channel.send("Utilisation: ?create <name> <description>")
