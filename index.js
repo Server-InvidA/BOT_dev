@@ -32,9 +32,8 @@ bot.on('message', message => {
 				console.send("ajouter role au créateur");
 				console.send("creer une catégorie");
 				console.send("creer un salon texte et vocal");
-				password.send(name + ", " + mdp);
+				password.send(name + " " + mdp);
 				console.send(mdp);
-				console.send(msgId);
 				
 				message.author.createDM().then(channel => {
 					channel.send("Merci d'avoir créé le projet " + name);
