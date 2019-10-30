@@ -36,9 +36,13 @@ bot.on('message', message => {
 				console.send(mdp);
 				console.send(msgId);
 				
-				/*message.author.createDM().then(channel => {
-					channel.send("Merci d'avoir créé le projet " + name);
-				}).catch(console.error);*/
+				message.author.createDM().then(channel => {
+					let msgPerso = new Discord.RichEmbed()
+						.setColor("#fdb200")
+						.addField("Merci d'avoir créé le projet " + name, "Description: " + description);
+						.addField("Vorte mot de passe a été enregistré comme: " + mdp, "A bientôt");
+					channel.send(msgPerso);
+				}).catch(console.error);
 				
 				
 			} else {
