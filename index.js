@@ -18,10 +18,11 @@ bot.on('message', message => {
 		let auteur = message.author.username;
 		
 		if (splitMessage[0] === '?create') {
-			if (splitMessage.length === 3) {
+			if (splitMessage.length === 4) {
 				let name = splitMessage[1];
 				let description = splitMessage[2];
-				//let mdp = splitMessage[3];
+				let mdp = splitMessage[3];
+				let msgId = message.id;
 				/*let newbot = new Discord.RichEmbed()
 					.setColor("#ff0000")
 					.addField(name + " par " + auteur, "Description: " + description);
@@ -32,13 +33,16 @@ bot.on('message', message => {
 				console.send("ajouter role au créateur");
 				console.send("creer password");
 				console.send("message privé");
+				console.send(mdp);
+				console.send(msgId);
 				
-				message.author.createDM().then(channel => {
+				/*message.author.createDM().then(channel => {
 					channel.send("Merci d'avoir créé le projet " + name);
-				}).catch(console.error);
+				}).catch(console.error);*/
+				
 				
 			} else {
-				message.channel.send("Utilisation: ?create <name> <description>");
+				message.channel.send("Utilisation: ?create <name> <description> <password>");
 			}
 		}
 	}
