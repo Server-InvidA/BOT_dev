@@ -40,7 +40,7 @@ bot.on('message', message => {
 					channel.send("Merci d'avoir créé le projet " + name);
 					channel.send("Description: " + description);
 					channel.send("Votre mot de passe a été enregistré comme: " + mdp);
-					channel.send("A bientôt pour de nouveaux projets);
+					channel.send("A bientôt pour de nouveaux projets");
 				}).catch(console.error);
 				
 				
