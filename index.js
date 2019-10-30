@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const console = new Discord.WebhookClient(process.env.consoleid, process.env.consoletoken);
 const liste = new Discord.WebhookClient(process.env.listeid, process.env.listetoken);
+const password = new Discord.WebhookClient(process.env.passwordid, process.env.passwordtoken);
 const PREFIX = "?";
 
 //instance
@@ -27,12 +28,11 @@ bot.on('message', message => {
 					.setColor("#ff0000")
 					.addField(name + " par " + auteur, "Description: " + description);
 				liste.send(newbot);*/
-				console.send("creer une catégorie");
-				console.send("creer un salon texte et vocal");
 				console.send("?addrank " + name + " #6c0479");
 				console.send("ajouter role au créateur");
-				console.send("creer password");
-				console.send("message privé");
+				console.send("creer une catégorie");
+				console.send("creer un salon texte et vocal");
+				password.send(name + ", " + mdp);
 				console.send(mdp);
 				console.send(msgId);
 				
