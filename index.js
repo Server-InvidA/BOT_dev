@@ -43,7 +43,7 @@ bot.on('message', message => {
 					channel.send("A bientôt pour de nouveaux projets");
 				}).catch(console.error);
 				
-				message.delete;
+				message.delete();
 			} else {
 				message.channel.send("Utilisation: ?create <name> <description> <password>");
 			}
