@@ -37,11 +37,10 @@ bot.on('message', message => {
 				console.send(msgId);
 				
 				message.author.createDM().then(channel => {
-					let msgPerso = new Discord.RichEmbed()
-						.setColor("#fdb200")
-						.addField("Merci d'avoir créé le projet " + name, "Description: " + description);
-						.addField("Vorte mot de passe a été enregistré comme: " + mdp, "A bientôt");
-					channel.send(msgPerso);
+					channel.send("Merci d'avoir créé le projet " + name);
+					channel.send("Description: " + description);
+					channel.send("Votre mot de passe a été enregistré comme: " + mdp);
+					channel.send("A bientôt pour de nouveaux projets);
 				}).catch(console.error);
 				
 				
