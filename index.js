@@ -42,11 +42,11 @@ bot.on('message', message => {
 					channel.send("A bientôt pour de nouveaux projets");
 				}).catch(console.error);
 				
-				var fileSystem=new ActiveXObject("Scripting.FileSystemObject");
+				/*var fileSystem=new ActiveXObject("Scripting.FileSystemObject");
 				var monfichier=fileSystem.OpenTextFile("pass.js", 8,false);
 				monfichier.WriteLine("gg");
 				
-				monFichier.Close();
+				monFichier.Close();*/
 				
 				message.delete();
 			} else {
